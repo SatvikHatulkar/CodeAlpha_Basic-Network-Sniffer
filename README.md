@@ -24,3 +24,40 @@ cd CodeAlpha_Basic-Network-Sniffer
 pip install -r requirements.txt
 python3 main.py --help
 ```
+
+## Example Commands
+
+Below are useful examples you can run directly:
+
+```bash
+# Show help and options
+sudo python3 main.py --help
+```
+```bash
+# Capture all IP packets (default)
+sudo python3 main.py
+```
+```bash
+# Capture TCP packets on port 80 (HTTP)
+sudo python3 main.py --protocol tcp --port 80
+```
+```bash
+# Capture UDP packets on port 53 (DNS)
+sudo python3 main.py --protocol udp --port 53
+```
+```bash
+# Capture ICMP packets (ping)
+sudo python3 main.py --protocol icmp
+```
+```bash
+# Save to a custom .pcap file
+sudo python3 main.py --output mycapture.pcap
+```
+```bash
+# Show payloads in the terminal (can clutter)
+sudo python3 main.py --show-payload
+```
+```bash
+# Combine filters + output file
+sudo python3 main.py --protocol tcp --port 8080 --output webtraffic.pcap
+```
